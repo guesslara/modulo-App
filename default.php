@@ -14,10 +14,14 @@
 	
 	$tpl->set_filenames(array('default'=>'default'));	
 	//informacion necesaria del usuario
-	$idProfile   = $userAdmin->user_info['ID_PROFILE'];
-	$idCliente   = $userAdmin->user_info['ID_CLIENTE'];
-	$idUsuario	 = $userAdmin->user_info['ID_USUARIO'];
-	$idTipo 	 = $userAdmin->user_info['ID_TIPO_USUARIO'];
+	//echo "<pre>";
+	//print_r($userAdmin->user_info);
+	//echo "</pre>";
+	$idProfile    	= 	$userAdmin->user_info['ID_PROFILE'];
+	$idCliente    	= 	$userAdmin->user_info['ID_CLIENTE'];
+	$idUsuario	 	= 	$userAdmin->user_info['ID_USUARIO'];
+	$idTipo 	 	= 	$userAdmin->user_info['ID_TIPO_USUARIO'];
+	$nombreUsuario 	= 	$userAdmin->user_info['NOMBRE_COMPLETO'];
 	//se extrae el  menu del usuario
 	$objFuncionesBase= new usersAdministration();
 
@@ -49,7 +53,8 @@
 		'PAGE_TITLE'	=> "Administraci&oacute;n de tareas",	
 		'PATH'			=> $dir_mod,
 		'IDCLIENTE'		=> $idCliente,
-		'IDUSUARIO'		=> $idUsuario
+		'IDUSUARIO'		=> $idUsuario,
+		'NOMBREUSUARIO'	=> $nombreUsuario
 	));
 
 	$tpl->pparse('default');

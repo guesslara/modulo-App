@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/ui.panel.css" />
     <link rel="stylesheet" type="text/css" href="./public/libs/jtables/jtables.css" />
     <link rel="stylesheet" type="text/css" href="public/libs/jquery-ui-multiselect/jquery.multiselect.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=drawing"></script>
     <script type="text/javascript" src="public/js/ui/jquery.js"></script>
     <script type="text/javascript" src="public/js/ui/jqueryUI.js"></script>
     <script type="text/javascript" src="public/js/ui/ui.panel.min.js"></script>
@@ -27,22 +28,37 @@
 <input type="hidden" id="idUsuarioAlertas" value="{IDUSUARIO}" />
 <div id="contenedorAppMovi" style="border:1px solid #990000;width:99.7%;position:absolute;left:50%;margin-left:-49.9%;">
     <div id="tabsAppMovi">
-        <ul>
+        <ul style="height:29px;">
             <!-- BEGIN listadoMenuP -->
-            <li><a href="#tab_{listadoMenuP.IDMENU}">{listadoMenuP.NOMBREMENU}</a></li>
+            <li><a href="#tab_{listadoMenuP.IDMENU}" onclick="cargarModulo('{listadoMenuP.URL}','{listadoMenuP.IDMENU}')">{listadoMenuP.NOMBREMENU}</a></li>
             <!-- END listadoMenuP -->
         </ul>
-        <div id="div_cerrarSesion" title="Cerrar Sesi&oacute;n" style="border:1px solid #FF0000;height:25px;width:26px;position:absolute;right:7px;margin-top:-30px;"><img src="public/images/shutdown1.png" border="0" width="35" height="35" style="margin-left:-4.75px;margin-top:-4px;"/></div>
-        <div id="div_usuarioLogo" title="Informaci&oacute;n Usuario" style="border:1px solid #FF0000;height:25px;width:32px;position:absolute;right:38px;margin-top:-30px;"><img src="public/images/User_32.png" border="0" style="margin-top:-3px;" /></div>
-        <div id="div_soporteUsuario" title="Soporte T&eacute;cnico" style="border:1px solid #FF0000;height:25px;width:32px;position:absolute;right:75px;margin-top:-30px;"><img src="public/images/Online-Support-32.png" border="0" style="margin-top:-3px;" /></div>
-        <div id="div_manualUsuario" title="Manual de Usuario" style="border:1px solid #FF0000;height:25px;width:32px;position:absolute;right:112px;margin-top:-30px;"><img src="public/images/Document-Folder-32.png" border="0" style="margin-top:-3px;" /></div>
+        <div id="div_cerrarSesion" title="Cerrar Sesi&oacute;n"><img src="public/images/shutdown1.png" border="0" width="35" height="35" style="margin-left:-4.75px;margin-top:-4px;"/></div>
+        <div id="div_usuarioLogo" title="Informaci&oacute;n Usuario"><img src="public/images/User_32.png" border="0" style="margin-top:-3px;" /></div>
+        <div id="div_soporteUsuario" title="Soporte T&eacute;cnico"><img src="public/images/Online-Support-32.png" border="0" style="margin-top:-3px;" /></div>
+        <div id="div_manualUsuario" title="Manual de Usuario"><img src="public/images/Document-Folder-32.png" border="0" style="margin-top:-3px;" /></div>
 
-        <div id="div_detalleUsuario" style="background:#FFF;border:1px solid #FF0000;right:38px;margin-top:-3px;width:300px;height:115px;position:absolute;">
-            <div style="border:1px solid #FF0000;width:100px;height:100px;margin:6px;" class="ui-corner-all"></div>
+        <div id="div_detalleUsuario">
+            <div style="float:left;border:1px solid #FF0000;width:85px;height:85px;margin:6px 2px 6px 6px;" class="ui-corner-all"><img src="public/images/logoReporte.png" border="0" width="80" height="80" style="margin-left:3px;margin-top:4px;" /></div>
+            <div style="float:left;border:1px solid #FF0000;width:178px;height:20px;margin:6px;padding:5px;font-size:.8em;">{NOMBREUSUARIO}</div>
         </div>
+
         <!-- BEGIN listadoMenuP -->
-        <div id="tab_{listadoMenuP.IDMENU}"></div>
+        <div id="tab_{listadoMenuP.IDMENU}" style="border:1px solid #FF0000;height:94.7%;width:99.5%;position:absolute;overflow:auto;padding:0px;"></div>
         <!-- END listadoMenuP -->
+    </div>
+
+    <!--Ventanas adicionales-->
+    <div id="div_manualUsuarioContenido">
+        <div class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header" style="height:15px;padding:5px;position:relative;">Ayuda...</div>
+        <div style="position:relative;border:0px solid #FF0000;height:85%;padding:5px;overflow:auto;background:#FFF;">Contenido</div>
+        <div style="border:0px solid #FF0000;height:34px;padding:5px;text-align:right;"> <button id="btnCerrarAyuda" type="button" style="height:25px;padding:5px;" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">Cerrar</button> </div>
+    </div>
+
+    <div id="div_ticketsServicio">
+        <div class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header" style="height:15px;padding:5px;position:relative;">Soporte T&eacute;cnico</div>
+        <div style="position:relative;border:0px solid #FF0000;height:85%;padding:5px;overflow:auto;background:#FFF;">Contenido</div>
+        <div style="border:0px solid #FF0000;background:#FFF;height:34px;padding:5px;text-align:right;"> <button id="btnCerrarTicket" type="button" style="height:25px;padding:5px;" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">Cerrar</button> </div>
     </div>
 </div>
 </body>

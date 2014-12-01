@@ -1,6 +1,20 @@
-body{
+body,document,html{
 	margin: 0;
 	font-family: "Arial", serif;
 	overflow: hidden;
 	font-size: 10px;
+	height:100%;
 }
+#div_cerrarSesion{border:0px solid #FF0000;height:25px;width:26px;position:absolute;right:7px;margin-top:-30px;}
+#div_cerrarSesion:hover{border:1px solid #81BEF7; cursor:pointer;}
+#div_usuarioLogo{border:0px solid #FF0000;height:25px;width:32px;position:absolute;right:38px;margin-top:-30px;}
+#div_usuarioLogo:hover{border:1px solid #81BEF7; cursor:pointer;}
+#div_soporteUsuario{border:0px solid #FF0000;height:25px;width:32px;position:absolute;right:75px;margin-top:-30px;}
+#div_soporteUsuario:hover{border:1px solid #81BEF7; cursor:pointer;}
+#div_manualUsuario{border:0px solid #FF0000;height:25px;width:32px;position:absolute;right:112px;margin-top:-30px;}
+#div_manualUsuario:hover{border:1px solid #81BEF7; cursor:pointer;}
+#div_detalleUsuario{display:none;background:#FFF;border:1px solid #FFF;right:38px;margin-top:-3px;width:300px;height:100px;position:absolute;box-shadow: 0 0 0.5em 1px rgba(0, 0, 0, 0.8);}
+
+#div_manualUsuarioContenido{display:none;border:0px solid #FF0000;height:80%;width:400px;position:absolute;right:5px;top:70px;overflow:hidden;box-shadow: 0 0 0.5em 1px rgba(0, 0, 0, 0.5);}
+
+#div_ticketsServicio{display:none;border:0px solid #FF0000;height:80%;width:400px;position:absolute;right:5px;top:70px;overflow:hidden;box-shadow: 0 0 0.5em 1px rgba(0, 0, 0, 0.5);}
