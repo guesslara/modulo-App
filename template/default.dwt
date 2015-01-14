@@ -22,31 +22,51 @@
     <script type="text/javascript" src="public/js/ui/jquery.numeric.js"></script>
     <script type="text/javascript" src="{PATH}/js/inicio.js"></script>
     <script type="text/javascript" src="{PATH}/js/scripts.js"></script>
+<style type="text/css">
+
+</style>
 </head>
 <body>
 <input type="hidden" id="idClienteAlertas" value="{IDCLIENTE}" />
 <input type="hidden" id="idUsuarioAlertas" value="{IDUSUARIO}" />
 <div id="contenedorAppMovi" style="border:1px solid #990000;width:99.7%;position:absolute;left:50%;margin-left:-49.9%;">
-    <div id="tabsAppMovi">
-        <ul style="height:29px;">
-            <!-- BEGIN listadoMenuP -->
-            <li><a href="#tab_{listadoMenuP.IDMENU}" onclick="cargarModulo('{listadoMenuP.URL}','{listadoMenuP.IDMENU}')">{listadoMenuP.NOMBREMENU}</a></li>
-            <!-- END listadoMenuP -->
-        </ul>
+
+    <div class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header" style="height:32px;padding:5px;border:1px solid #FF0000;">
+        <div style="border:1px solid #FF0000;width:30px;height:30px;background:#FFF;"></div>
+
+        <div style="position:absolute;border:1px solid #FF0000;height:450px;;width:460px;background:#FFF;overflow:auto;">
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+            <div style="border:1px solid #FF0000;width:80px;height:80px;margin:5px;float:left;">&nbsp;</div>
+        </div>
+
         <div id="div_cerrarSesion" title="Cerrar Sesi&oacute;n"><img src="public/images/shutdown1.png" border="0" width="35" height="35" style="margin-left:-4.75px;margin-top:-4px;"/></div>
         <div id="div_usuarioLogo" title="Informaci&oacute;n Usuario"><img src="public/images/User_32.png" border="0" style="margin-top:-3px;" /></div>
         <div id="div_soporteUsuario" title="Soporte T&eacute;cnico"><img src="public/images/Online-Support-32.png" border="0" style="margin-top:-3px;" /></div>
         <div id="div_manualUsuario" title="Manual de Usuario"><img src="public/images/Document-Folder-32.png" border="0" style="margin-top:-3px;" /></div>
-
-        <div id="div_detalleUsuario">
-            <div style="float:left;border:1px solid #FF0000;width:85px;height:85px;margin:6px 2px 6px 6px;" class="ui-corner-all"><img src="public/images/logoReporte.png" border="0" width="80" height="80" style="margin-left:3px;margin-top:4px;" /></div>
-            <div style="float:left;border:1px solid #FF0000;width:178px;height:20px;margin:6px;padding:5px;font-size:.8em;">{NOMBREUSUARIO}</div>
-        </div>
-
-        <!-- BEGIN listadoMenuP -->
-        <div id="tab_{listadoMenuP.IDMENU}" style="border:1px solid #FF0000;height:94.7%;width:99.5%;position:absolute;overflow:auto;padding:0px;"></div>
-        <!-- END listadoMenuP -->
     </div>
+    
+    <div id="contenedorAppModulos" style="border:1px solid #FF0000;width:99.7%;height:100px;">
+
+    </div>    
+
 
     <!--Ventanas adicionales-->
     <div id="div_manualUsuarioContenido">
